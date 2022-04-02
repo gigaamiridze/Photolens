@@ -1,0 +1,323 @@
+@import "../modules/variables.scss";
+@import "../modules/classes.scss";
+@import "../modules/mixins.scss";
+@import "../main/responsive.scss";
+
+body {
+    padding-top: $px68;
+}
+
+// header
+.fixed-header {
+    position: fixed;
+    background-color: $white;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    .header-cont {
+        @extend %header-cont;
+        .flex-block {
+            @include display (flex);
+            @include flex-property (space-between, center);
+            height: $px68;
+            .logo {
+                height: $px24;
+            }
+            .navigation {
+                .nav-ul {
+                    @include display (flex);
+                    .nav {
+                        @include text-property ($px14, $inter, $black, $upper, $px24);
+                        margin-right: $px40;
+                        padding-bottom: 1.5px;
+                        position: relative;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            width: 100%;
+                            height: 1.5px;
+                            background: $black;
+                            transform: scale(0, 1);
+                            transition: 0.3s linear;
+                        }
+                        &:hover::after {
+                            transform: scale(1, 1);
+                        }
+                    }
+                    .min-marg {
+                        margin-right: 0px;
+                    }
+                }
+            }
+            .shopping-cart {
+                width: $px36;
+                height: $px36;
+            }
+        }
+    }
+}
+
+// first section
+.img-block {
+    height: 509px;
+    position: relative;
+    .slideshow-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1; 
+        opacity: 0;
+        transition: opacity 1s ease;
+        filter: brightness(80%);
+        &:nth-child(5) {
+            object-position: center top;
+        }
+    }
+    .img-content {
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -40%);
+        .person {
+            @include text-property ($px72, $playFair, $white, $upper, $px96);
+            font-weight: $bold;
+        }
+        .professions {
+            @include text-property ($px24, $inter, $white, $upper, $px34);
+            text-align: center;
+            margin-top: $px20;
+        }
+        .button-block {
+            @include display (flex);
+            justify-content: center;
+            margin-top: $px50;
+            .left-btn {
+                @include sizes ($px153, 100%, $px40);
+                @include display (flex);
+                @include flex-property (center, center);
+                background-color: $white;
+                border-radius: $px2;
+                margin-right: $px20;
+                cursor: pointer;
+                transition: 0.4s ease;
+                &:hover {
+                    background-color: $gray;
+                }
+                .touch-link {
+                    @include text-property ($px14, $inter, $black, $upper, $px20);
+                }
+            }
+            .right-btn {
+                @include sizes ($px153, 100%, $px40);
+                background-color: hsla(0, 0%, 100%, 0.2);
+                border: $px1 $white solid;
+                border-radius: $px2;
+                cursor: pointer;
+                transition: 0.4s ease;
+                &:hover {
+                    background-color: $white;
+                }
+                .shop-link {
+                    @include text-property ($px14, $inter, $white, $upper, $px40);
+                    @include display (flex);
+                    @include flex-property (center, center);
+                    width: 100%;
+                    transition: 0.4s ease;
+                    &:hover {
+                        color: $black;
+                    }
+                }
+            }
+        }
+    }
+    .mouse {
+        position: absolute;
+        width: $px42;
+        height: $px42;
+        left: 50%;
+        bottom: $px20;
+        transform: translate(-50%);
+    }
+}
+
+// second section
+.section-cont {
+    @extend %section-cont;
+    .work-block {
+        @include display (flex);
+        justify-content: space-between;
+        padding-top: $px100;
+        &:last-child {
+            padding-top: 0;
+            padding-bottom: $px100;
+            margin-top: $px16;
+        }
+        .img-box {
+            @include sizes (577px, 100%, 280px);
+            border-radius: $px4;
+            position: relative;
+            overflow: hidden;
+            .work-link {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                @include display (flex);
+                @include flex-property (center, center);
+                .work-title {
+                    @include text-property ($px24, $fredoka, $white, $upper, none);
+                    z-index: 1;
+                }
+            }
+            .work-img {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                filter: brightness(80%);
+                transition: 0.6s ease;
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+            .position {
+                object-position: center top;
+            }
+        }
+    }
+}
+
+.divider {
+    @extend %divider;
+}
+.min-px {
+    height: 0.7px;
+}
+
+// third section
+.center-block {
+    padding: $px100 0 $px100 0;
+    max-width: 920px;
+    width: 100%;
+    margin: 0 auto;
+    @include display (flex);
+    align-items: center;
+    .img-box {
+        @include sizes (420px, 100%, 600px);
+        margin-right: $px40;
+        .photographer-boy {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: $px4;
+        }
+    }
+    .text-content {
+        max-width: 460px;
+        .about-title {
+            @include text-property ($px34, $playFair, $black, $upper, none);
+            font-weight: $bold;
+            margin-bottom: $px35;
+        }
+        .text {
+            @include text-property ($px16, $inter, $black, none, $px24);
+            &:nth-child(odd) {
+                margin-top: $px20;
+            }
+        }
+    }
+    .buttons-flex {
+        @include display (flex);
+        margin-top: $px30;
+        .left-btn {
+            @include sizes ($px153, 100%, $px40);
+            @include display (flex);
+            @include flex-property (center, center);
+            background-color: $black;
+            border-radius: $px2;
+            margin-right: $px20;
+            cursor: pointer;
+            transition: 0.4s ease;
+            &:hover {
+                opacity: 0.8;
+            }
+            .touch-link {
+                @include text-property ($px14, $inter, $white, $upper, $px20);
+            }
+        }
+        .right-btn {
+            @include sizes ($px153, 100%, $px40);
+            background-color: $white;
+            border: $px1 $black solid;
+            border-radius: $px2;
+            cursor: pointer;
+            transition: 0.4s ease;
+            &:hover {
+                background-color: $black;
+            }
+            .shop-link {
+                @include text-property ($px14, $inter, $black, $upper, $px40);
+                @include display (flex);
+                @include flex-property (center, center);
+                width: 100%;
+                transition: 0.4s ease;
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+// footer
+.footer-box {
+    padding: $px60 0 $px60 0;
+    .social-icons {
+        @include display (flex);
+        justify-content: center;
+        margin-bottom: $px30;
+        .icon {
+            font-size: $px30;
+            color: $dark-gray;
+            margin-right: $px17;
+            transition: 0.3s linear;
+            &:hover {
+                color: $black;
+            }
+        }
+        .fa-facebook-f {
+            font-size: $px28;
+        }
+        .fa-instagram {
+            margin-right: 0;
+        }
+    }
+    .small-paragraph {
+        @include text-property ($px14, $inter, $dark-gray, none, $px20);
+        text-align: center;
+        .author-link {
+            color: $black;
+            font-weight: 600;
+        }
+    }
+}
+
+// reveal scroll
+.reveal {
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+}

@@ -1,0 +1,27 @@
+@import "../modules/variables.scss";
+@import "../modules/classes.scss";
+@import "../modules/mixins.scss";
+@import "../main/responsive.scss";
+
+// images' section
+.section-cont {
+    .gallery {
+        @include display (flex);
+        justify-content: space-between;
+        margin-top: $px20;
+        padding-bottom: $px100;
+        .images-vertical-block {
+            max-width: 379px;
+            width: 100%;
+        }
+    }
+}
+
+.image {
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: $px15;
+}
+.del-marg-bott {
+    margin-bottom: 0;
+}

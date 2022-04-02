@@ -1,0 +1,77 @@
+@import "../modules/variables.scss";
+@import "../modules/classes.scss";
+@import "../modules/mixins.scss";
+@import "../main/responsive.scss";
+
+// denial 'work' nav link hover effect
+.fixed-header {
+    .header-cont {
+        .flex-block {
+            .navigation {
+                .nav-ul {
+                    .hover-denial::after {
+                        transform: none;
+                        transition: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//  first section
+.text-content {
+    max-width: 465px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: $px50;
+    .content-title {
+        @include text-property ($px42, $playFair, $black, $upper, none);
+        font-weight: $bold;
+        text-align: center;
+        margin-bottom: $px15;
+    }
+    .content-text {
+        @include text-property ($px16, $inter, $black, none, $px24);
+        text-align: center;
+    }
+}
+
+// second section
+.section-cont {
+    .back-link {
+        @include display (flex);
+        width: $px70;
+        align-items: center;
+        padding-top: $px30;
+        .fa-angle-left {
+            font-size: $px18;
+            color: $black;
+            margin-right: $px10;
+        }
+        .page-name {
+            @include text-property ($px14, $inter, $dark-gray, $upper, none);
+            font-weight: $medium;
+            padding-bottom: 1.5px;
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+                background-color: $black;
+                transform: scale(0, 1);
+                transition: 0.3s linear;
+            }
+            &:hover::after {
+                transform: scale(1, 1);
+            }
+        }
+    }
+    .change-size {
+        padding-top: 0;
+        margin-top: $px20;
+    }
+}

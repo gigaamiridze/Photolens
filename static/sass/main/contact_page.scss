@@ -1,0 +1,64 @@
+@import "../modules/variables.scss";
+@import "../modules/classes.scss";
+@import "../modules/mixins.scss";
+@import "../main/responsive.scss";
+
+// third section
+.input-cont {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: $px40 0 $px100 0;
+    .form {
+        .input-flex {
+            @include display (flex);
+            justify-content: space-between;
+            margin-bottom: $px20;
+        }
+        .center-box {
+            @include display (flex);
+            justify-content: center;
+            .submit-btn {
+                width: 320px;
+                height: $px40;
+                background-color: $black;
+                border: 0;
+                border-radius: $px4;
+                cursor: pointer;
+                @include text-property ($px14, $inter, $white, $upper, none);
+                transition: 0.3s ease;
+                &:hover {
+                    background-color: $dark-gray;
+                }
+            }
+        }
+    }
+}
+
+.input-field {
+    width: 330px;
+    height: $px46;
+    border: 1px solid $gray-3;
+    background-color: $gray-3;
+    border-radius: $px4;
+    outline: none;
+    padding-left: $px20;
+    @include text-property ($px14, $inter, $black-1, none, none);
+    font-weight: $medium;
+    cursor: text;
+    transition: 0.3s ease;
+    &:hover {
+        border-color: $gray-4;
+    }
+}
+.textarea-field {
+    height: 200px;
+    resize: none;
+    margin: $px20 0 $px30 0;
+    padding-top: $px16;
+}
+.capitalize {
+    text-transform: $capit;
+}
+.max-width {
+    width: 100%;
+}

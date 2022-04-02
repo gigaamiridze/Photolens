@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:url"                content="" />
+        <meta property="og:type"               content="" />
+        <meta property="og:title"              content="Photolens" />
+        <meta property="og:description"        content="" />
+        <meta property="og:image"              content="" />
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="Tokyo, HTML, CSS, SASS, SCSS, JavaScript">
+        <meta name="author" content="Giga Amiridze">
+        <link rel="icon" type="image/gif" href="{{ url_for('static', filename='images/lens.png') }}" sizes="16x16">
+        <script src="https://kit.fontawesome.com/b1609179cd.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        <title>Photolens • Work</title>
+    </head>
+    <body>
+        <header class="fixed-header">
+            <div class="header-cont">
+                <div class="flex-block">
+                    <a href="/">
+                        <img src="{{ url_for('static', filename='images/photolens.svg') }}" alt="Photolens" class="logo">
+                    </a>
+                    <nav class="navigation">
+                        <ul class="nav-ul">
+                            <li>
+                               <a class="nav hover-denial" href="/work">work</a> 
+                            </li>
+                            <li>
+                                <a class="nav" href="/#about">about</a>
+                             </li>
+                             <li>
+                                <a class="nav" href="/shop">shop</a> 
+                             </li>
+                             <li>
+                                <a class="nav min-marg" href="/contact">contact</a> 
+                             </li>
+                        </ul>
+                    </nav>
+                    <img class="shopping-cart" src="{{ url_for('static', filename='images/shopping-cart.svg') }}" alt="Shopping cart">
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="text-content">
+                <h2 class="content-title">work</h2>
+                <p class="content-text">
+                    Vivamus aliquam vehicula gravida. Sed luctus posuere luctus.
+                    Morbi tempor, massa eget dignissim tincidunt, lorem dolor
+                    ultrices lacus, a molestie massa dui varius sapien.
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="section-cont">
+                <a href="/" class="back-link">
+                    <i class="fa-solid fa-angle-left"></i>
+                    <h6 class="page-name">home</h6>
+                </a>
+                <div class="work-block change-size">
+                    <div class="img-box">
+                        <a href="/project-categories/media" class="work-link">
+                            <h3 class="work-title">media</h3>
+                            <img src="{{ url_for('static', filename='images/media.jpeg') }}" alt="Boy" class="work-img">
+                        </a>
+                    </div>
+                    <div class="img-box">
+                        <a href="/project-categories/events" class="work-link">
+                            <h3 class="work-title">events</h3>
+                            <img src="{{ url_for('static', filename='images/event.jpeg') }}" alt="Event" class="work-img">
+                        </a>
+                    </div>
+                </div>
+                <div class="work-block">
+                    <div class="img-box">
+                        <a href="/project-categories/portraits" class="work-link">
+                            <h3 class="work-title">portraits</h3>
+                            <img src="{{ url_for('static', filename='images/portrait.jpeg') }}" alt="Portrait" class="work-img position">
+                        </a>
+                    </div>
+                    <div class="img-box">
+                        <a href="/project-categories/landscape" class="work-link">
+                            <h3 class="work-title">landscape</h3>
+                            <img src="{{ url_for('static', filename='images/landscape.jpeg') }}" alt="Landscape" class="work-img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="divider"></div>
+        </section>
+        <footer>
+            <div class="footer-box">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="blank">
+                        <i class="fab fa-facebook-f icon"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="blank">
+                        <i class="fab fa-twitter icon"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="blank">
+                        <i class="fab fa-instagram icon"></i>
+                    </a>
+                </div>
+                <p class="small-paragraph">© Photolens created by <a href="https://github.com/gigaamiridzee" class="author-link" target="blank">Giga Amiridze</a></p>
+            </div>
+        </footer>
+    </body>
+</html>

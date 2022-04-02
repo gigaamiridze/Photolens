@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:url"                content="" />
+        <meta property="og:type"               content="" />
+        <meta property="og:title"              content="Photolens" />
+        <meta property="og:description"        content="" />
+        <meta property="og:image"              content="" />
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="Tokyo, HTML, CSS, SASS, SCSS, JavaScript">
+        <meta name="author" content="Giga Amiridze">
+        <link rel="icon" type="image/gif" href="{{ url_for('static', filename='images/lens.png') }}" sizes="16x16">
+        <script src="https://kit.fontawesome.com/b1609179cd.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        <title>Photolens • Landscape</title>
+    </head>
+    <body>
+        <header class="fixed-header">
+            <div class="header-cont">
+                <div class="flex-block">
+                    <a href="/">
+                        <img src="{{ url_for('static', filename='images/photolens.svg') }}" alt="Photolens" class="logo">
+                    </a>
+                    <nav class="navigation">
+                        <ul class="nav-ul">
+                            <li>
+                                <a class="nav" href="/work">work</a> 
+                            </li>
+                            <li>
+                                <a class="nav" href="/#about">about</a>
+                            </li>
+                            <li>
+                                <a class="nav" href="/shop">shop</a> 
+                            </li>
+                            <li>
+                                <a class="nav min-marg" href="/contact">contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <img class="shopping-cart" src="{{ url_for('static', filename='images/shopping-cart.svg') }}" alt="Shopping cart">
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="links-box change-prop">
+                <div class="vertical-line"></div>
+                <a href="/project-categories/media" class="link delete-underline hover-effect">media</a>
+                <div class="vertical-line"></div>
+                <a href="/project-categories/events" class="link delete-underline hover-effect">events</a>
+                <div class="vertical-line"></div>
+                <a href="/project-categories/portraits" class="link delete-underline hover-effect">portraits</a>
+                <div class="vertical-line"></div>
+                <a href="/project-categories/landscape" class="link delete-underline black-link">landscape</a>
+                <div class="vertical-line"></div>
+            </div>
+            <div class="text-content">
+                <h2 class="content-title">landscape</h2>
+                <p class="content-text">
+                    Landscape photography shows the spaces within the world,
+                    sometimes vast and unending, but other times microscopic.
+                    Landscape photographs typically capture the presence of
+                    nature but can also focus on man-made features of
+                    landscapes.
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="section-cont">
+                <a href="/work" class="back-link add-padd-top-50">
+                    <i class="fa-solid fa-angle-left"></i>
+                    <h6 class="page-name">work</h6>
+                </a>
+                <div class="content-block change-size-1">
+                    <div class="content-box">
+                        <div class="img-box">
+                            <a href="/project/flash-waves" class="content-link">
+                                <img src="{{ url_for('static', filename='images/sicilia.jpeg') }}" alt="Sicilia" class="content-img">
+                            </a>
+                        </div>
+                        <div class="img-info">
+                            <a href="/project/flash-waves" class="location no-transform">Flash waves, Sicilia</a>
+                            <div class="dash"></div>
+                            <p class="money no-transform"><span class="for">for</span> Personal project</p>
+                        </div>
+                    </div>
+                    <div class="content-box">
+                        <div class="img-box">
+                            <a href="/project/l-a-birds-view" class="content-link">
+                                <img src="{{ url_for('static', filename='images/los_angeles.jpeg') }}" alt="Los Angeles" class="content-img">
+                            </a>
+                        </div>
+                        <div class="img-info">
+                            <a href="/project/l-a-birds-view" class="location no-transform">L.A. Birds view, Los Angeles</a>
+                            <div class="dash"></div>
+                            <p class="money no-transform"><span class="for">for</span> Aereal Shots</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="divider min-px"></div>
+        </section>
+        <footer>
+            <div class="footer-box">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="blank">
+                        <i class="fab fa-facebook-f icon"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="blank">
+                        <i class="fab fa-twitter icon"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="blank">
+                        <i class="fab fa-instagram icon"></i>
+                    </a>
+                </div>
+                <p class="small-paragraph">© Photolens created by <a href="https://github.com/gigaamiridzee" class="author-link" target="blank">Giga Amiridze</a></p>
+            </div>
+        </footer>
+    </body>
+</html>

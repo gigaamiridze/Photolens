@@ -1,0 +1,112 @@
+@import "../modules/variables.scss";
+@import "../modules/classes.scss";
+@import "../modules/mixins.scss";
+@import "../main/responsive.scss";
+
+// photo info styles
+.text-content {
+    .info-box {
+        @include display (flex);
+        width: 375px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: $px25;
+        margin-bottom: $px20;
+        .photo-info {
+            @include display (flex);
+            align-items: center;
+            margin-right: $px20;
+            &:last-child {
+                margin-right: 0;
+            } 
+            .small-par {
+                @include text-property ($px14, $inter, $dark-gray, none, $px20);
+                margin-left: $px8;
+            }
+        }
+    }
+}
+
+// second section
+.section-cont {
+    .content-block {
+        .cart-box {
+            width: 380px;
+            height: 437px;
+            position: sticky;
+            top: $px68;
+            padding: $px20;
+            border-width: $px1;
+            border-style: solid;
+            border-color: $gray-3;
+            h3 {
+                @include text-property ($px24, $inter, $black, $capit, $px34);
+                font-weight: $semi-bold;
+            }
+            p {
+                @include text-property ($px16, $inter, $black, none, $px24);
+                margin: $px20 0 $px30 0;
+            }
+            .form {
+                @include display (flex);
+                flex-direction: column;
+                .label {
+                    @include text-property ($px16, $inter, $black, $capit, none);
+                    font-weight: $semi-bold;
+                    margin-bottom: $px10;
+                }
+                .select-field {
+                    height: $px38;
+                    width: 100%;
+                    background-color: $gray-3;
+                    border-color: $gray-3;
+                    border-radius: $px2;
+                    border-right-width: $px12;
+                    outline: none;
+                    cursor: pointer;
+                    @include text-property ($px14, $inter, $dark-gray, $capit, none);
+                    padding-left: $px12;
+                    margin-bottom: $px30;
+                }
+                .quantity-input {
+                    height: $px38;
+                    width: 65px;
+                    background-color: $gray-3;
+                    border: $px1 solid $gray-3;
+                    border-radius: $px2;
+                    outline: none;
+                    cursor: pointer;
+                    @include text-property ($px16, $inter, $dark-gray, none, none);
+                    padding: 0 $px6 0 $px10;
+                    margin-bottom: $px30;
+                }
+                .add-cart {
+                    height: $px40;
+                    width: 100%;
+                    background-color: $black;
+                    border: $px1 solid $black;
+                    border-radius: $px2;
+                    outline: none;
+                    cursor: pointer;
+                    @include text-property ($px14, $inter, $white, $upper, $px20);
+                }
+            }
+        }
+        .images-box {
+            max-width: 730px;
+            width: 100%;
+            a {
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: $px2;
+                    margin-bottom: $px15;
+                }
+            }
+        }
+    }
+}
+
+body {
+    font-family: $inter;
+}

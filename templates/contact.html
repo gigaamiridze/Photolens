@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:url"                content="" />
+        <meta property="og:type"               content="" />
+        <meta property="og:title"              content="Photolens" />
+        <meta property="og:description"        content="" />
+        <meta property="og:image"              content="" />
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="Tokyo, HTML, CSS, SASS, SCSS, JavaScript">
+        <meta name="author" content="Giga Amiridze">
+        <link rel="icon" type="image/gif" href="{{ url_for('static', filename='images/lens.png') }}" sizes="16x16">
+        <script src="https://kit.fontawesome.com/b1609179cd.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        <title>Photolens • Contact</title>
+    </head>
+    <body>
+        <header class="fixed-header">
+            <div class="header-cont">
+                <div class="flex-block">
+                    <a href="/">
+                        <img src="{{ url_for('static', filename='images/photolens.svg') }}" alt="Photolens" class="logo">
+                    </a>
+                    <nav class="navigation">
+                        <ul class="nav-ul">
+                            <li>
+                               <a class="nav" href="/work">work</a> 
+                            </li>
+                            <li>
+                                <a class="nav" href="/#about">about</a>
+                             </li>
+                             <li>
+                                <a class="nav" href="/shop">shop</a> 
+                             </li>
+                             <li>
+                                <a class="nav min-marg hover-denial" href="/contact">contact</a>
+                             </li>
+                        </ul>
+                    </nav>
+                    <img class="shopping-cart" src="{{ url_for('static', filename='images/shopping-cart.svg') }}" alt="Shopping cart">
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="text-content">
+                <h2 class="content-title">contact</h2>
+                <p class="content-text">
+                    Get in touch and let’s work togheter to a new amazing project.
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="input-cont">
+                <form class="form" name="text">
+                    <div class="input-flex">
+                        <input type="text" class="input-field capitalize" name="name" id="name" maxlength="200" placeholder="Name" required>
+                        <input type="email" class="input-field" name="email" id="email" maxlength="200" placeholder="Email" required>
+                    </div>
+                    <input type="text" class="input-field capitalize max-width" name="Subject" maxlength="300" placeholder="Subject" required>
+                    <textarea class="input-field textarea-field capitalize max-width" name="field" id="field" cols="30" rows="10" maxlength="5000" placeholder="Example Text" required></textarea>
+                    <div class="center-box">
+                        <input type="submit" value="Submit" class="submit-btn">
+                    </div>
+                </form>
+            </div>
+            <div class="divider min-px"></div>
+        </section>
+        <footer>
+            <div class="footer-box">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="blank">
+                        <i class="fab fa-facebook-f icon"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="blank">
+                        <i class="fab fa-twitter icon"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="blank">
+                        <i class="fab fa-instagram icon"></i>
+                    </a>
+                </div>
+                <p class="small-paragraph">© Photolens created by <a href="https://github.com/gigaamiridzee" class="author-link" target="blank">Giga Amiridze</a></p>
+            </div>
+        </footer>
+    </body>
+</html>

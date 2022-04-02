@@ -1,0 +1,44 @@
+@import "../modules/variables.scss";
+@import "../modules/classes.scss";
+@import "../modules/mixins.scss";
+@import "../main/responsive.scss";
+
+// first section
+// changed properties on links box
+.change-prop {
+    width: 433px;
+    margin-top: 0;
+    padding: $px30 0 0 0;
+}
+
+.links-box {
+    .delete-underline:hover::after {
+        transform: scale(0, 0);
+    }
+    .hover-effect {
+        transition: 0.3s ease;
+        &:hover {
+            color: $black;
+        }
+    }
+}
+
+// second section
+.section-cont {
+    .add-padd-top-50 {
+        padding-top: $px50;
+    }
+    .change-size-1:last-child {
+        margin-top: $px20;
+        .content-box {
+            .img-info {
+                .no-transform {
+                    text-transform: none;
+                }
+                .for {
+                    font-weight: $regular;
+                }
+            }
+        }
+    }
+}
