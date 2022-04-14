@@ -189,11 +189,12 @@ body {
 .fixed-header .header-cont .flex-block .shopping-cart {
   width: 36px;
   height: 36px;
+  cursor: pointer;
 }
 .fixed-header .header-cont .flex-block .cart {
   position: fixed;
   top: 0;
-  right: 0;
+  right: -100%;
   width: 480px;
   min-height: 100vh;
   background: #FFFFFF;
@@ -215,6 +216,9 @@ body {
   color: #222222;
   text-transform: uppercase;
   line-height: 25px;
+}
+.fixed-header .header-cont .flex-block .cart .cart-header #close-cart {
+  cursor: pointer;
 }
 .fixed-header .header-cont .flex-block .cart .cart-body {
   width: 100%;

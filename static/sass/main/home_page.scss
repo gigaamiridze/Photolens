@@ -55,14 +55,19 @@ body {
             .shopping-cart {
                 width: $px36;
                 height: $px36;
+                cursor: pointer;
             }
             .cart {
                 position: fixed;
                 top: 0;
-                right: 0;
+                right: -100%;
                 width: 480px;
                 min-height: 100vh;
                 background: $white;
+                transition: 0.7s;
+                &.active {
+                    right: 0;
+                }
                 .cart-header {
                     @include display (flex);
                     @include flex-property (space-between, center);
@@ -70,6 +75,9 @@ body {
                     padding: $px16 $px24 $px16 $px24;
                     .cart-title {
                         @include text-property ($px18, $inter, $black, $upper, $px25);
+                    }
+                    #close-cart {
+                        cursor: pointer;
                     }
                 }
                 .cart-divider {
