@@ -18,6 +18,12 @@
     background-color: $gray-1;
 }
 
+%cart-divider {
+    width: 100%;
+    height: 0.7px;
+    background-color: $gray-3;
+}
+
 %center {
     position: absolute;
     left: 50%;

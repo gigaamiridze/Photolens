@@ -89,6 +89,10 @@
                     outline: none;
                     cursor: pointer;
                     @include text-property ($px14, $inter, $white, $upper, $px20);
+                    transition: 0.4s ease;
+                    &:hover {
+                        opacity: 0.8;
+                    }
                 }
             }
         }

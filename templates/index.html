@@ -45,7 +45,25 @@
                              </li>
                         </ul>
                     </nav>
-                    <img class="shopping-cart" src="{{ url_for('static', filename='images/shopping-cart.svg') }}" alt="Shopping cart">
+                    <img class="shopping-cart" id="cart-icon" src="{{ url_for('static', filename='images/shopping-cart.svg') }}" alt="Shopping cart">
+                    <div class="cart">
+                        <div class="cart-header">
+                            <h2 class="cart-title">your cart</h2>
+                            <img src="{{ url_for('static', filename='images/close-icon.svg') }}" id="close-cart" alt="Close">
+                        </div>
+                        <div class="cart-divider"></div>
+                        <div class="cart-body">
+                            <p class="no-item">no items found.</p>
+                        </div>
+                        <div class="cart-divider"></div>
+                        <div class="cart-footer">
+                            <div class="total">
+                                <div class="total-title">subtotal</div>
+                                <div class="total-price">$0 usd</div>
+                            </div>
+                            <button type="button" class="btn-buy">continue to checkout</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>

@@ -56,6 +56,67 @@ body {
                 width: $px36;
                 height: $px36;
             }
+            .cart {
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 480px;
+                min-height: 100vh;
+                background: $white;
+                .cart-header {
+                    @include display (flex);
+                    @include flex-property (space-between, center);
+                    width: 100%;
+                    padding: $px16 $px24 $px16 $px24;
+                    .cart-title {
+                        @include text-property ($px18, $inter, $black, $upper, $px25);
+                    }
+                }
+                .cart-divider {
+                    @extend %cart-divider;
+                }
+                .cart-body {
+                    width: 100%;
+                    height: 428px;
+                    @include display (flex);
+                    @include flex-property (center, center);
+                    .no-item {
+                        @include text-property ($px16, $inter, $black, $capit, $px26);
+                    }
+                }
+                .cart-footer {
+                    width: 100%;
+                    padding: $px16 $px24 $px24 $px24;
+                    position: absolute;
+                    bottom: 0;
+                    .total {
+                        @include display (flex);
+                        @include flex-property (space-between, center);
+                        margin-bottom: $px16;
+                        .total-title {
+                            @include text-property ($px16, $inter, $black, $capit, $px24);
+                        }
+                        .total-price {
+                            @include text-property ($px16, $inter, $black, $upper, $px24);
+                            font-weight: $bold;
+                        }
+                    }
+                    .btn-buy {
+                        height: $px40;
+                        width: 100%;
+                        background-color: $black;
+                        border: $px1 solid $black;
+                        border-radius: $px2;
+                        outline: none;
+                        cursor: pointer;
+                        @include text-property ($px14, $inter, $white, $upper, $px20);
+                        transition: 0.4s ease;
+                        &:hover {
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
         }
     }
 }
