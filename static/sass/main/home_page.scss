@@ -3,6 +3,17 @@
 @import "../modules/mixins.scss";
 @import "../main/responsive.scss";
 
+body::-webkit-scrollbar {
+    width: $px10;
+}
+body::-webkit-scrollbar-track {
+    background-color: rgb(240, 240, 240);
+}
+body::-webkit-scrollbar-thumb {
+    background-color: $gray;
+    border-radius: $px5;
+}
+
 .lightbox {
     position: fixed;
     background: #000;
