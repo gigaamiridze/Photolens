@@ -3,8 +3,24 @@
 @import "../modules/mixins.scss";
 @import "../main/responsive.scss";
 
+.lightbox {
+    position: fixed;
+    background: #000;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    opacity: 0;
+    transition: opacity 250ms ease-in-out, width 0ms ease-in-out 250ms;
+}
 body {
     padding-top: $px68;
+    &.open .lightbox {
+        width: 100%;
+        opacity: 0.8;
+        transition: opacity 250ms ease-in-out, width 0ms ease-in-out;
+    }
 }
 
 // header
@@ -64,7 +80,8 @@ body {
                 width: 480px;
                 min-height: 100vh;
                 background: $white;
-                transition: 0.7s;
+                z-index: 20;
+                transition: 0.6s;
                 &.active {
                     right: 0;
                 }
