@@ -168,6 +168,9 @@ body.open .lightbox {
   opacity: 0.8;
   transition: opacity 250ms ease-in-out, width 0ms ease-in-out;
 }
+body.open {
+  overflow-y: hidden;
+}
 
 .fixed-header {
   position: fixed;
