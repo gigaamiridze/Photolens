@@ -117,8 +117,8 @@ body {
                 .cart-body {
                     width: 100%;
                     height: 428px;
-                    @include display (flex);
-                    @include flex-property (center, center);
+                    // @include display (flex);
+                    // @include flex-property (center, center);
                     .no-item {
                         @include text-property ($px16, $inter, $black, $capit, $px26);
                     }
@@ -158,6 +158,58 @@ body {
             }
         }
     }
+}
+
+.product-box {
+    @include display (flex);
+    padding: $px24;
+}
+.product-img {
+    width: 120px;
+    height: $px80;
+    object-fit: cover;
+}
+.product-info {
+    @include display (flex);
+    width: 296px;
+    justify-content: space-between;
+    margin-left: $px16;
+}
+.title,
+.location,
+.size {
+    @include text-property ($px14, $inter, $dark-gray, $capit, $px20);
+}
+.title {
+    font-weight: $semi-bold;
+}
+.remove-btn {
+    @include text-property ($px14, $inter, $gray-2, $capit, $px20);
+    cursor: pointer;
+    transition: 200ms ease;
+    &:hover {
+        color: $dark-gray;
+    }
+}
+.number-info {
+    @include display (flex);
+    flex-direction: column;
+}
+.price {
+    @include text-property ($px14, $inter, $dark-gray, $upper, $px20);
+    font-weight: $semi-bold;
+    margin-bottom: $px22;
+}
+.quantity {
+    width: $px60;
+    height: $px38;
+    background-color: $gray-3;
+    border: $px1 $gray-3 solid;
+    border-radius: $px3;
+    outline: none;
+    padding: $px8 $px6 $px8 $px12;
+    font-size: $px15;
+    font-family: $inter;
 }
 
 // first section
