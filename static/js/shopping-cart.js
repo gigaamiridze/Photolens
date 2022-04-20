@@ -6,19 +6,19 @@ const closeCart = document.querySelector("#close-cart");
 // Open cart
 cartIcon.onclick = () => {
     cart.classList.add("active");
-    openLightbox();
+    openBackground();
 }
 
-function openLightbox() {
+function openBackground() {
     $('body').addClass('open');
 }
 
 // Close cart
 closeCart.onclick = () => {
     cart.classList.remove("active");
-    closeLightbox();
+    closeBackground();
 } 
 
-function closeLightbox() {
+function closeBackground() {
     $('body').removeClass('open');
 }

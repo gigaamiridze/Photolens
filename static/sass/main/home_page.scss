@@ -14,7 +14,7 @@ body::-webkit-scrollbar-thumb {
     border-radius: $px5;
 }
 
-.lightbox {
+.background {
     position: fixed;
     background: #000;
     width: 0;
@@ -27,7 +27,7 @@ body::-webkit-scrollbar-thumb {
 }
 body {
     padding-top: $px68;
-    &.open .lightbox {
+    &.open .background {
         width: 100%;
         opacity: 0.8;
         transition: opacity 250ms ease-in-out, width 0ms ease-in-out;
