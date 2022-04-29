@@ -265,6 +265,9 @@ body.open {
   text-transform: capitalize;
   line-height: 26px;
 }
+.fixed-header .header-cont .flex-block .cart .cart-body .no-item.hide {
+  display: none;
+}
 .fixed-header .header-cont .flex-block .cart .cart-footer {
   width: 100%;
   padding: 16px 24px 24px 24px;

@@ -17,7 +17,7 @@ function openBackground() {
 closeCart.onclick = () => {
     cart.classList.remove("active");
     closeBackground();
-} 
+}
 
 function closeBackground() {
     $('body').removeClass('open');
