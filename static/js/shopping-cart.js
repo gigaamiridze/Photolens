@@ -35,8 +35,14 @@ function ready() {
   // Remove item from cart
   const removeBtn = document.getElementsByClassName("remove-btn");
   for (var i = 0; i < removeBtn.length; i++) {
-    var button = removeBtn[i];
-    button.addEventListener('click', removeItem);
+      var button = removeBtn[i];
+      button.addEventListener('click', removeItem);
+  }
+  // Quantity change
+  var quantityInputs = document.getElementsByClassName("quantity");
+  for (var i = 0; i < quantityInputs.length; i++) {
+      var input = quantityInputs[i];
+      input.addEventListener("change", quantityChanged);
   }
 }
 
@@ -44,4 +50,12 @@ function ready() {
 function removeItem(event) {
   btnClicked = event.target;
   btnClicked.parentElement.parentElement.parentElement.remove();
+}
+
+// Quantity change
+function quantityChanged(event) {
+  var input = event.target;
+  if (isNaN(input.value) || input.value <= 0) {
+      input.value = 1;
+  }
 }
