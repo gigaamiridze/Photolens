@@ -1,7 +1,7 @@
 @import "../modules/variables";
 @import "../modules/classes";
 @import "../modules/mixins";
-@import "./responsive";
+@import "./breakpoints";
 
 body::-webkit-scrollbar {
     width: $px10;
@@ -57,11 +57,32 @@ body {
             .navigation {
                 .nav-ul {
                     @include display (flex);
+                    @include responsive(tablet-lg) {
+                        position: fixed;
+                        flex-direction: column;
+                        text-align: center;
+                        top: $px68;
+                        left: 0;
+                        bottom: 100%;
+                        background-color: $white;
+                        width: 100%;
+                        line-height: 49px;
+                        overflow: hidden;
+                        transition: all 0.5s ease;
+                        &.active {
+                            bottom: 50%;
+                            padding: 20px 0;
+                        }
+                    }
                     .nav {
                         @include text-property ($px14, $inter, $black, $upper, $px24);
                         margin-right: $px40;
                         padding-bottom: 1.5px;
                         position: relative;
+                        @include responsive(tablet-lg) {
+                            font-size: $px16;
+                            margin-right: 0;
+                        }
                         &::after {
                             content: '';
                             position: absolute;
@@ -82,10 +103,50 @@ body {
                     }
                 }
             }
-            .shopping-cart {
-                width: $px36;
-                height: $px36;
-                cursor: pointer;
+            .main-menu {
+                @include responsive(tablet-lg) {
+                    @include display (flex);
+                    @include flex-property (center, center);
+                }
+                .shopping-cart {
+                    width: $px36;
+                    height: $px36;
+                    cursor: pointer;
+                    @include responsive(tablet-lg) { margin-right: $px20 }
+                }
+                .burger-menu {
+                    display: none;
+                    cursor: pointer;
+                    &.active .bar:nth-child(1) {
+                        transform: translateY(8px) rotate(45deg);
+                        width: $px24;
+                    }
+                    &.active .bar:nth-child(2) {
+                        opacity: 0;
+                    }
+                    &.active .bar:nth-child(3) {
+                        transform: translateY(-8px) rotate(-45deg);
+                        width: $px24;
+                    }
+                    @include responsive(tablet-lg) { display: block; }
+                    .bar {
+                        display: block;
+                        height: $px2;
+                        background-color: $black;
+                        border-radius: $px2;
+                        transition: all 0.4s ease;
+                        &:nth-child(1) {
+                            width: $px12;
+                        }
+                        &:nth-child(2) {
+                            width: $px24;
+                            margin: $px6 auto;
+                        }
+                        &:nth-child(3) {
+                            width: $px18;
+                        }
+                    }
+                }    
             }
             .cart {
                 position: fixed;
