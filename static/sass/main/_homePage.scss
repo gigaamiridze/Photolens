@@ -162,7 +162,6 @@ body {
                 right: -100%;
                 max-width: 480px;
                 width: 100%;
-                min-width: 320px;
                 min-height: 100vh;
                 background: $white;
                 z-index: 20;
@@ -175,8 +174,14 @@ body {
                     @include flex-property (space-between, center);
                     width: 100%;
                     padding: $px16 $px24 $px16 $px24;
+                    @include responsive(phone-port-md) {
+                        padding-right: $px15;
+                        padding-left: $px15;
+                    }
                     .cart-title {
                         @include text-property ($px18, $inter, $black, $upper, $px25);
+                        @include responsive(phone-port-md) { font-size: $px17; }
+                        @include responsive(phone-port-sm) { font-size: $px16; }
                     }
                     #close-cart {
                         cursor: pointer;
@@ -187,11 +192,73 @@ body {
                 }
                 .cart-body {
                     width: 100%;
-                    height: 428px;
+                    height: 396px;
                     .no-item {
                         @include text-property ($px16, $inter, $black, $capit, $px26);
                         &.hide {
                             display: none;
+                        }
+                    }
+                    .product-box {
+                        @include display (flex);
+                        padding: $px24;
+                        @include responsive(phone-port-md) {
+                            padding-right: $px15;
+                            padding-left: $px15;
+                        }
+                        .product-img {
+                            width: 120px;
+                            height: $px80;
+                            object-fit: cover;
+                            @include responsive(phone-port-md) { width: 105px; }
+                        }
+                        .product-info {
+                            @include display (flex);
+                            width: 296px;
+                            justify-content: space-between;
+                            margin-left: $px16;
+                            @include responsive(phone-port-md) { margin-left: $px13; }
+                            .text-info {
+                                .title,
+                                .location,
+                                .size {
+                                    @include text-property ($px14, $inter, $dark-gray, $capit, $px20);
+                                    @include responsive(phone-port-sm) { font-size: 13.5px; }
+                                }
+                                .title {
+                                    font-weight: $semi-bold;
+                                }
+                                .remove-btn {
+                                    @include text-property ($px14, $inter, $gray-2, $capit, $px20);
+                                    cursor: pointer;
+                                    transition: 200ms ease;
+                                    @include responsive(phone-port-sm) { font-size: 13.5px; }
+                                    &:hover {
+                                        color: $dark-gray;
+                                    }
+                                }
+                            }
+                            .number-info {
+                                @include display (flex);
+                                flex-direction: column;
+                                .price {
+                                    @include text-property ($px14, $inter, $dark-gray, $upper, $px20);
+                                    font-weight: $semi-bold;
+                                    margin-bottom: $px22;
+                                }
+                                .quantity {
+                                    width: $px60;
+                                    height: $px38;
+                                    background-color: $gray-3;
+                                    border: $px1 $gray-3 solid;
+                                    border-radius: $px3;
+                                    outline: none;
+                                    padding: $px8 $px6 $px8 $px12;
+                                    font-size: $px15;
+                                    font-family: $inter;
+                                    @include responsive(phone-port-md) { width: $px55; }
+                                }
+                            }
                         }
                     }
                 }
@@ -200,6 +267,10 @@ body {
                     padding: $px16 $px24 $px24 $px24;
                     position: absolute;
                     bottom: 0;
+                    @include responsive(phone-port-md) {
+                        padding-right: $px15;
+                        padding-left: $px15;
+                    }
                     .total {
                         @include display (flex);
                         @include flex-property (space-between, center);
@@ -210,6 +281,7 @@ body {
                         .total-price {
                             @include text-property ($px16, $inter, $black, $upper, $px24);
                             font-weight: $bold;
+                            @include responsive(phone-port-md) { font-size: $px15; }
                         }
                     }
                     .btn-buy {
@@ -225,63 +297,12 @@ body {
                         &:hover {
                             opacity: 0.8;
                         }
+                        @include responsive(phone-port-sm) { font-size: 13.5px; }
                     }
                 }
             }
         }
     }
-}
-
-.product-box {
-    @include display (flex);
-    padding: $px24;
-}
-.product-img {
-    width: 120px;
-    height: $px80;
-    object-fit: cover;
-}
-.product-info {
-    @include display (flex);
-    width: 296px;
-    justify-content: space-between;
-    margin-left: $px16;
-}
-.title,
-.location,
-.size {
-    @include text-property ($px14, $inter, $dark-gray, $capit, $px20);
-}
-.title {
-    font-weight: $semi-bold;
-}
-.remove-btn {
-    @include text-property ($px14, $inter, $gray-2, $capit, $px20);
-    cursor: pointer;
-    transition: 200ms ease;
-    &:hover {
-        color: $dark-gray;
-    }
-}
-.number-info {
-    @include display (flex);
-    flex-direction: column;
-}
-.price {
-    @include text-property ($px14, $inter, $dark-gray, $upper, $px20);
-    font-weight: $semi-bold;
-    margin-bottom: $px22;
-}
-.quantity {
-    width: $px60;
-    height: $px38;
-    background-color: $gray-3;
-    border: $px1 $gray-3 solid;
-    border-radius: $px3;
-    outline: none;
-    padding: $px8 $px6 $px8 $px12;
-    font-size: $px15;
-    font-family: $inter;
 }
 
 // first section
