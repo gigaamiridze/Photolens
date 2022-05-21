@@ -138,6 +138,31 @@ a {
 body::-webkit-scrollbar {
   width: 10px;
 }
+@media only screen and (max-width: 900px) {
+  body::-webkit-scrollbar {
+    width: 9px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  body::-webkit-scrollbar {
+    width: 8px;
+  }
+}
+@media only screen and (max-width: 670px) {
+  body::-webkit-scrollbar {
+    width: 7px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  body::-webkit-scrollbar {
+    width: 6px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  body::-webkit-scrollbar {
+    width: 5px;
+  }
+}
 
 body::-webkit-scrollbar-track {
   background-color: #f0f0f0;

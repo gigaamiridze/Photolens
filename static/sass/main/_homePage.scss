@@ -5,6 +5,11 @@
 
 body::-webkit-scrollbar {
     width: $px10;
+    @include responsive(tablet-lg) { width: $px9; }
+    @include responsive(tablet) { width: $px8; }
+    @include responsive(phone-land-md) { width: $px7; }
+    @include responsive(phone-land-sm) { width: $px6; }
+    @include responsive(phone-port-md) { width: $px5; }
 }
 body::-webkit-scrollbar-track {
     background-color: rgb(240, 240, 240);
