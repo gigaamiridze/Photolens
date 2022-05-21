@@ -53,6 +53,7 @@ body {
             height: $px68;
             .logo {
                 height: $px24;
+                @include responsive(phone-port-md) { height: $px22; }
             }
             .navigation {
                 .nav-ul {
@@ -66,7 +67,7 @@ body {
                         bottom: 100%;
                         background-color: $white;
                         width: 100%;
-                        line-height: 49px;
+                        line-height: $px45;
                         overflow: hidden;
                         transition: all 0.5s ease;
                         &.active {
@@ -83,6 +84,7 @@ body {
                             font-size: $px16;
                             margin-right: 0;
                         }
+                        @include responsive(phone-port-md) { font-size: $px15; }
                         &::after {
                             content: '';
                             position: absolute;
@@ -113,6 +115,7 @@ body {
                     height: $px36;
                     cursor: pointer;
                     @include responsive(tablet-lg) { margin-right: $px20 }
+                    @include responsive(phone-port-sm) { margin-right: $px15; }
                 }
                 .burger-menu {
                     display: none;
@@ -152,7 +155,9 @@ body {
                 position: fixed;
                 top: 0;
                 right: -100%;
-                width: 480px;
+                max-width: 480px;
+                width: 100%;
+                min-width: 320px;
                 min-height: 100vh;
                 background: $white;
                 z-index: 20;

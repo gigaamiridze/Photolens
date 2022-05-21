@@ -189,6 +189,11 @@ body.open {
 .fixed-header .header-cont .flex-block .logo {
   height: 24px;
 }
+@media only screen and (max-width: 375px) {
+  .fixed-header .header-cont .flex-block .logo {
+    height: 22px;
+  }
+}
 .fixed-header .header-cont .flex-block .navigation .nav-ul {
   display: flex;
 }
@@ -202,7 +207,7 @@ body.open {
     bottom: 100%;
     background-color: #FFFFFF;
     width: 100%;
-    line-height: 49px;
+    line-height: 45px;
     overflow: hidden;
     transition: all 0.5s ease;
   }
@@ -225,6 +230,11 @@ body.open {
   .fixed-header .header-cont .flex-block .navigation .nav-ul .nav {
     font-size: 16px;
     margin-right: 0;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .fixed-header .header-cont .flex-block .navigation .nav-ul .nav {
+    font-size: 15px;
   }
 }
 .fixed-header .header-cont .flex-block .navigation .nav-ul .nav::after {
@@ -259,6 +269,11 @@ body.open {
 @media only screen and (max-width: 900px) {
   .fixed-header .header-cont .flex-block .main-menu .shopping-cart {
     margin-right: 20px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .fixed-header .header-cont .flex-block .main-menu .shopping-cart {
+    margin-right: 15px;
   }
 }
 .fixed-header .header-cont .flex-block .main-menu .burger-menu {
@@ -302,7 +317,9 @@ body.open {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 480px;
+  max-width: 480px;
+  width: 100%;
+  min-width: 320px;
   min-height: 100vh;
   background: #FFFFFF;
   z-index: 20;
@@ -1307,6 +1324,11 @@ body.open {
   .fixed-header .header-cont {
     max-width: 100%;
     padding: 0 40px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .fixed-header .header-cont {
+    padding: 0 15px;
   }
 }
 
