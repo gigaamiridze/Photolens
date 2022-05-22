@@ -469,16 +469,44 @@ body {
         @include display (flex);
         justify-content: space-between;
         padding-top: $px100;
+        @include responsive(desktop) { 
+            padding-left: $px15;
+            padding-right: $px15;
+        }
+        @include responsive(tablet-lg) {
+            padding-top: $px80;
+            padding-left: $px40;
+            padding-right: $px40;
+        }
+        @include responsive(tablet) {
+            padding-left: $px15;
+            padding-right: $px15;
+            flex-direction: column;
+        }
+        @include responsive(phone-land-sm) { padding-top: $px60; }
+        @include responsive(phone-port-md) { padding-top: $px50; }
         &:last-child {
             padding-top: 0;
             padding-bottom: $px100;
             margin-top: $px16;
+            @include responsive(tablet-lg) { padding-bottom: $px80; }
+            @include responsive(phone-land-sm) { padding-bottom: $px60; }
+            @include responsive(phone-port-md) { padding-bottom: $px50; }
         }
         .img-box {
             @include sizes (577px, 100%, 280px);
             border-radius: $px4;
             position: relative;
             overflow: hidden;
+            @include responsive(desktop) { margin-right: $px16; }
+            @include responsive(tablet) {
+                margin-right: 0;
+                max-width: 100%;
+            }
+            &:last-child {
+                @include responsive(desktop) { margin-right: 0; }
+                @include responsive(tablet) { margin-top: $px16; }
+            }
             .work-link {
                 position: absolute;
                 left: 0;
@@ -490,6 +518,7 @@ body {
                 .work-title {
                     @include text-property ($px24, $fredoka, $white, $upper, none);
                     z-index: 1;
+                    @include responsive(tablet-lg) { font-size: $px20; }
                 }
             }
             .work-img {

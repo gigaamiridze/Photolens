@@ -820,10 +820,55 @@ body.open {
   justify-content: space-between;
   padding-top: 100px;
 }
+@media only screen and (max-width: 1024px) {
+  .section-cont .work-block {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .section-cont .work-block {
+    padding-top: 80px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .section-cont .work-block {
+    padding-left: 15px;
+    padding-right: 15px;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .section-cont .work-block {
+    padding-top: 60px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .section-cont .work-block {
+    padding-top: 50px;
+  }
+}
 .section-cont .work-block:last-child {
   padding-top: 0;
   padding-bottom: 100px;
   margin-top: 16px;
+}
+@media only screen and (max-width: 900px) {
+  .section-cont .work-block:last-child {
+    padding-bottom: 80px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .section-cont .work-block:last-child {
+    padding-bottom: 60px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .section-cont .work-block:last-child {
+    padding-bottom: 50px;
+  }
 }
 .section-cont .work-block .img-box {
   max-width: 577px;
@@ -832,6 +877,27 @@ body.open {
   border-radius: 4px;
   position: relative;
   overflow: hidden;
+}
+@media only screen and (max-width: 1024px) {
+  .section-cont .work-block .img-box {
+    margin-right: 16px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .section-cont .work-block .img-box {
+    margin-right: 0;
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .section-cont .work-block .img-box:last-child {
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .section-cont .work-block .img-box:last-child {
+    margin-top: 16px;
+  }
 }
 .section-cont .work-block .img-box .work-link {
   position: absolute;
@@ -850,6 +916,11 @@ body.open {
   text-transform: uppercase;
   line-height: none;
   z-index: 1;
+}
+@media only screen and (max-width: 900px) {
+  .section-cont .work-block .img-box .work-link .work-title {
+    font-size: 20px;
+  }
 }
 .section-cont .work-block .img-box .work-img {
   position: absolute;
