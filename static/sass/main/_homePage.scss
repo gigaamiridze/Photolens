@@ -329,19 +329,71 @@ body {
         left: 50%;
         top: 40%;
         transform: translate(-50%, -40%);
+        @include responsive(desktop) {
+            max-width: 611px;
+            width: 100%;
+        }
+        @include responsive(tablet) {
+            top: 41%;
+            transform: translate(-50%, -41%);
+        }
+        @include responsive(phone-port-lg) {
+            top: 43%;
+            transform: translate(-50%, -43%);
+        }
         .person {
             @include text-property ($px72, $playFair, $white, $upper, $px96);
             font-weight: $bold;
+            @include responsive(tablet) {
+                font-size: $px52;
+                line-height: $px60;
+                @include display (flex);
+                justify-content: center;
+            }
+            @include responsive(phone-land-sm) {
+                font-size: $px48;
+                line-height: $px55;
+            }
+            @include responsive(phone-port-lg) {
+                font-size: $px45;
+                line-height: $px50;
+            }
+            @include responsive(phone-port-md) {
+                font-size: $px42;
+                line-height: $px45;
+            }
+            @include responsive(phone-port-sm) {
+                font-size: $px35;
+                line-height: $px40;
+            }
         }
         .professions {
             @include text-property ($px24, $inter, $white, $upper, $px34);
             text-align: center;
             margin-top: $px20;
+            @include responsive(tablet-lg) {
+                font-size: $px22;
+                line-height: $px28;
+            }
+            @include responsive(tablet) { font-size: $px20; }
+            @include responsive(phone-land-sm) {
+                font-size: $px18;
+                line-height: $px25;
+            }
+            @include responsive(phone-port-md) { font-size: $px17; }
+            @include responsive(phone-port-sm) {
+                font-size: $px16;
+                margin-top: $px15;
+            }
         }
         .button-block {
             @include display (flex);
             justify-content: center;
             margin-top: $px50;
+            @include responsive(tablet) { margin-top: $px40; }
+            @include responsive(phone-land-sm) { margin-top: $px35; }
+            @include responsive(phone-port-md) { margin-top: $px30; }
+            @include responsive(phone-port-sm) { margin-top: $px25; }
             .left-btn {
                 @include sizes ($px153, 100%, $px40);
                 @include display (flex);
@@ -354,8 +406,19 @@ body {
                 &:hover {
                     background-color: $gray;
                 }
+                @include responsive(tablet) { max-width: 142px; }
+                @include responsive(phone-land-sm) {
+                    height: $px35;
+                    margin-right: $px15;
+                }
+                @include responsive(phone-port-sm) {
+                    max-width: 130px;
+                    margin-right: $px10;
+                }
                 .touch-link {
                     @include text-property ($px14, $inter, $black, $upper, $px20);
+                    @include responsive(phone-land-sm) { font-size: $px13; }
+                    @include responsive(phone-port-sm) { font-size: 12.5px; }
                 }
             }
             .right-btn {
@@ -368,6 +431,9 @@ body {
                 &:hover {
                     background-color: $white;
                 }
+                @include responsive(tablet) { max-width: 142px; }
+                @include responsive(phone-land-sm) { height: $px35; }
+                @include responsive(phone-port-sm) { max-width: 130px; }
                 .shop-link {
                     @include text-property ($px14, $inter, $white, $upper, $px40);
                     @include display (flex);
@@ -377,6 +443,11 @@ body {
                     &:hover {
                         color: $black;
                     }
+                    @include responsive(phone-land-sm) {
+                        font-size: $px13;
+                        line-height: $px35;
+                    }
+                    @include responsive(phone-port-sm) { font-size: 12.5px; }
                 }
             }
         }

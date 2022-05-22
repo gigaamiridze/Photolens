@@ -4,7 +4,7 @@
         @media only screen and (max-width: 320px) { @content };
     }
     @if $breakpoint == phone-port-md {
-        @media only screen and (max-width: 375px) { @content };
+        @media only screen and (max-width: 380px) { @content };
     }
     @if $breakpoint == phone-port-lg {
         @media only screen and (max-width: 420px) { @content };
