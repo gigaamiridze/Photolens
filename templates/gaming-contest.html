@@ -46,7 +46,14 @@
                             </li>
                         </ul>
                     </nav>
-                    <img class="shopping-cart" id="cart-icon" src="{{ url_for('static', filename='images/shopping-cart.svg') }}" alt="Shopping cart">
+                    <div class="main-menu">
+                        <img class="shopping-cart" id="cart-icon" src="{{ url_for('static', filename='images/shopping-cart.svg') }}" alt="Shopping cart">
+                        <div class="burger-menu">
+                            <span class="bar"></span>    
+                            <span class="bar"></span>    
+                            <span class="bar"></span>
+                        </div>
+                    </div>
                     <div class="cart">
                         <div class="cart-header">
                             <h2 class="cart-title">your cart</h2>
@@ -160,5 +167,6 @@
         </footer>
         <script src="{{ url_for('static', filename='js/lightbox-plus-jquery.min.js') }}"></script>
         <script src="{{ url_for('static', filename='js/shopping-cart.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/burger-menu.js') }}"></script>
     </body>
 </html>
