@@ -1281,13 +1281,29 @@ body.open {
   transition: none;
 }
 
-.text-content {
+@media only screen and (max-width: 768px) {
+  .first-section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.first-section .text-content {
   max-width: 465px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 50px;
 }
-.text-content .content-title {
+@media only screen and (max-width: 768px) {
+  .first-section .text-content {
+    padding-top: 30px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .first-section .text-content {
+    padding-top: 10px;
+  }
+}
+.first-section .text-content .content-title {
   font-size: 42px;
   font-family: "Playfair Display", serif;
   color: #222222;
@@ -1297,13 +1313,35 @@ body.open {
   text-align: center;
   margin-bottom: 15px;
 }
-.text-content .content-text {
+@media only screen and (max-width: 768px) {
+  .first-section .text-content .content-title {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .first-section .text-content .content-title {
+    font-size: 28px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .first-section .text-content .content-title {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+}
+.first-section .text-content .content-text {
   font-size: 16px;
   font-family: "Inter", sans-serif;
   color: #222222;
   text-transform: none;
   line-height: 24px;
   text-align: center;
+}
+@media only screen and (max-width: 380px) {
+  .first-section .text-content .content-text {
+    font-size: 15px;
+    line-height: 23px;
+  }
 }
 
 .section-cont .back-link {
@@ -1312,10 +1350,35 @@ body.open {
   align-items: center;
   padding-top: 30px;
 }
+@media only screen and (max-width: 1024px) {
+  .section-cont .back-link {
+    padding-left: 15px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .section-cont .back-link {
+    padding-left: 40px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .section-cont .back-link {
+    padding-left: 15px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .section-cont .back-link {
+    padding-top: 25px;
+  }
+}
 .section-cont .back-link .fa-angle-left {
   font-size: 18px;
   color: #222222;
   margin-right: 10px;
+}
+@media only screen and (max-width: 320px) {
+  .section-cont .back-link .fa-angle-left {
+    font-size: 16px;
+  }
 }
 .section-cont .back-link .page-name {
   font-size: 14px;
@@ -1344,6 +1407,11 @@ body.open {
 .section-cont .change-size {
   padding-top: 0;
   margin-top: 20px;
+}
+@media only screen and (max-width: 320px) {
+  .section-cont .change-size {
+    margin-top: 15px;
+  }
 }
 
 .fixed-header .header-cont {
