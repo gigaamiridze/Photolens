@@ -1172,10 +1172,27 @@ body.open {
 .footer-box {
   padding: 60px 0 60px 0;
 }
+@media only screen and (max-width: 768px) {
+  .footer-box {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .footer-box {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
 .footer-box .social-icons {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
+}
+@media only screen and (max-width: 380px) {
+  .footer-box .social-icons {
+    margin-bottom: 20px;
+  }
 }
 .footer-box .social-icons .icon {
   font-size: 30px;

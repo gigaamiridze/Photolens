@@ -678,10 +678,19 @@ body {
 // footer
 .footer-box {
     padding: $px60 0 $px60 0;
+    @include responsive(tablet) {
+        padding-top: $px40;
+        padding-bottom: $px40;
+    }
+    @include responsive(phone-port-md) {
+        padding-top: $px30;
+        padding-bottom: $px30;
+    }
     .social-icons {
         @include display (flex);
         justify-content: center;
         margin-bottom: $px30;
+        @include responsive(phone-port-md) { margin-bottom: $px20; }
         .icon {
             font-size: $px30;
             color: $dark-gray;
