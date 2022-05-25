@@ -30,6 +30,7 @@
         margin-left: auto;
         margin-right: auto;
         padding-top: $px50;
+        @include responsive(tablet-lg) { padding-top: $px35; } 
         @include responsive(tablet) { padding-top: $px30; }
         @include responsive(phone-land-sm) { padding-top: $px10; }
         .content-title {

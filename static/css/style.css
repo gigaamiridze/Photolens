@@ -1293,6 +1293,11 @@ body.open {
   margin-right: auto;
   padding-top: 50px;
 }
+@media only screen and (max-width: 900px) {
+  .first-section .text-content {
+    padding-top: 35px;
+  }
+}
 @media only screen and (max-width: 768px) {
   .first-section .text-content {
     padding-top: 30px;
@@ -1464,6 +1469,31 @@ body.open {
   margin-top: 25px;
   padding-bottom: 60px;
 }
+@media only screen and (max-width: 900px) {
+  .links-box {
+    width: 411px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .links-box {
+    width: 381px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .links-box {
+    width: 326px;
+    padding-bottom: 45px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .links-box {
+    overflow: scroll;
+    max-width: 336px;
+    width: 100%;
+    padding-bottom: 0;
+    margin-bottom: 40px;
+  }
+}
 .links-box .link {
   font-size: 14px;
   font-family: "Inter", sans-serif;
@@ -1474,6 +1504,32 @@ body.open {
   position: relative;
   padding-bottom: 1.5px;
   margin: 0 20px 0 20px;
+}
+@media only screen and (max-width: 900px) {
+  .links-box .link {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .links-box .link {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .links-box .link {
+    font-size: 13px;
+    margin: 0 15px 0 15px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .links-box .link {
+    font-size: 12.5px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .links-box .link::after {
+    height: 1.1px;
+  }
 }
 .links-box .link:hover::after {
   transform: scale(1, 1);

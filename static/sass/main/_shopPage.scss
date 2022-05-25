@@ -11,6 +11,19 @@
     margin: 0 auto;
     margin-top: $px25;
     padding-bottom: $px60;
+    @include responsive(tablet-lg) { width: 411px; }
+    @include responsive(tablet) { width: 381px; }
+    @include responsive(phone-land-sm) {
+        width: 326px;
+        padding-bottom: $px45;
+    }
+    @include responsive(phone-port-md) {
+        overflow: scroll;
+        max-width: 336px;
+        width: 100%;
+        padding-bottom: 0;
+        margin-bottom: $px40;
+    }
     .vertical-line {
         @extend %vertical-line;
     }
@@ -20,8 +33,16 @@
         position: relative;
         padding-bottom: 1.5px;
         margin: 0 $px20 0 $px20;
+        @include responsive(tablet-lg) { font-size: $px16; }
+        @include responsive(tablet) { font-size: $px14; }
+        @include responsive(phone-land-sm) {
+            font-size: $px13;
+            margin: 0 $px15 0 $px15;
+        }
+        @include responsive(phone-port-md) { font-size: 12.5px; }
         &::after {
             @extend %underline;
+            @include responsive(phone-port-md) { height: 1.1px; }
         }
         &:hover::after {
             transform: scale(1, 1);
