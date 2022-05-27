@@ -58,20 +58,50 @@
 
 // second section
 .section-cont {
+    @include responsive(desktop) { padding: 0 $px15 0 $px15; }
+    @include responsive(tablet-lg) { padding: 0 $px40 0 $px40; }
+    @include responsive(tablet) { padding: 0 $px15 0 $px15; }
     .content-block {
         @include display (flex);
         justify-content: space-between;
+        @include responsive(tablet) { flex-direction: column; }
         &:last-child {
             margin-top: $px50;
             padding-bottom: $px100;
+            @include responsive(tablet-lg) { padding-bottom: $px80; }
+            @include responsive(phone-land-sm) {
+                padding-bottom: $px60;
+                margin-top: $px40;
+            }
+            @include responsive(phone-port-md) {
+                padding-bottom: $px50;
+                margin-top: $px35;
+            }
+            @include responsive(phone-port-sm) { margin-top: $px30; }
         }
         .content-box {
-            @include sizes (577px, 100%, 400px);
+            @include sizes (577px, 100%, 100%);
+            @include responsive(tablet) { max-width: 100%; }
+            &:first-child {
+                @include responsive(desktop) { margin-right: $px15; }
+                @include responsive(tablet) { margin-right: 0; }
+            }
+            &:nth-child(even) {
+                @include responsive(tablet) { margin-top: $px50; }
+                @include responsive(phone-land-sm) { margin-top: $px40; }
+                @include responsive(phone-port-md) { margin-top: $px35; }
+                @include responsive(phone-port-sm) { margin-top: $px30; }
+            }
             .img-box {
                 @include sizes (100%, 100%, 360px);
                 border-radius: $px4;
                 position: relative;
                 overflow: hidden;
+                @include responsive(tablet-lg) { height: 280px; }
+                @include responsive(tablet) { height: 320px; }
+                @include responsive(phone-land-sm) { height: 220px; }
+                @include responsive(phone-port-md) { height: 200px; }
+                @include responsive(phone-port-sm) { height: 180px; }
                 .content-link {
                     position: absolute;
                     left: 0;
@@ -93,8 +123,13 @@
                 @include display (flex);
                 align-items: center;
                 margin-top: $px15;
+                @include responsive(phone-land-sm) { margin-top: $px10; }
+                @include responsive(phone-port-md) { margin-top: $px7; }
+                @include responsive(phone-port-sm) { margin-top: $px5; }
                 .location {
                     @include text-property ($px16, $inter, $black, $capit, $px24);
+                    @include responsive(phone-port-md) { font-size: $px15; }
+                    @include responsive(phone-port-sm) { font-size: $px14; }
                 }
                 .dash {
                     width: $px10;
@@ -106,6 +141,8 @@
                 .money {
                     @include text-property ($px16, $inter, $black, $upper, $px24);
                     font-weight: $semi-bold;
+                    @include responsive(phone-port-md) { font-size: $px15; }
+                    @include responsive(phone-port-sm) { font-size: $px14; }
                 }
             }
         }

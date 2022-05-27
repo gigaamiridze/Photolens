@@ -691,17 +691,20 @@ body {
         justify-content: center;
         margin-bottom: $px30;
         @include responsive(phone-port-md) { margin-bottom: $px20; }
+        @include responsive(phone-port-sm) { margin-bottom: $px15; }
         .icon {
             font-size: $px30;
             color: $dark-gray;
             margin-right: $px17;
             transition: 0.3s linear;
+            @include responsive(phone-port-sm) { font-size: $px28; }
             &:hover {
                 color: $black;
             }
         }
         .fa-facebook-f {
             font-size: $px28;
+            @include responsive(phone-port-sm) { font-size: $px27; }
         }
         .fa-instagram {
             margin-right: 0;
