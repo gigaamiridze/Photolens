@@ -57,7 +57,8 @@
 }
 
 // second section
-.section-cont {
+.shop-cont {
+    @extend %section-cont;
     @include responsive(desktop) { padding: 0 $px15 0 $px15; }
     @include responsive(tablet-lg) { padding: 0 $px40 0 $px40; }
     @include responsive(tablet) { padding: 0 $px15 0 $px15; }
