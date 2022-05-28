@@ -5,12 +5,28 @@
 
 // first section
 // changed properties on links box
+.add-padd {
+    @include responsive(phone-port-lg) { padding-top: $px20; }
+    @include responsive(phone-port-md) { padding-top: $px15; }
+}
 .change-prop {
     width: 433px;
     margin-top: 0;
     padding: $px30 0 0 0;
+    @include responsive(tablet-lg) { width: 470px; }
+    @include responsive(tablet) { width: 433px; }
+    @include responsive(phone-land-sm) {
+        width: 374px;
+        padding-top: $px20;
+        margin-bottom: $px20;
+    }
+    @include responsive(phone-port-lg) {
+        overflow: scroll;
+        width: 100%;
+        padding-top: 0;
+    }
+    @include responsive(phone-port-md) { margin-bottom: $px15; }
 }
-
 .links-box {
     .delete-underline:hover::after {
         transform: scale(0, 0);
@@ -27,9 +43,16 @@
 .section-cont {
     .add-padd-top-50 {
         padding-top: $px50;
+        @include responsive(tablet) { padding-top: $px40; }
+        @include responsive(phone-port-md) { padding-top: $px30; }
+        @include responsive(phone-port-sm) { padding-top: $px25; }
     }
+}
+.shop-cont {
     .change-size-1:last-child {
         margin-top: $px20;
+        @include responsive(phone-port-md) { margin-top: $px15; }
+        @include responsive(phone-port-sm) { margin-top: $px10; }
         .content-box {
             .img-info {
                 .no-transform {

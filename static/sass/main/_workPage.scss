@@ -71,13 +71,15 @@
             font-size: $px18;
             color: $black;
             margin-right: $px10;
-            @include responsive(phone-port-sm) { font-size: $px16; }
+            @include responsive(phone-port-md) { font-size: $px17; }
+            @include responsive(phone-port-sm) { font-size: $px15; }
         }
         .page-name {
             @include text-property ($px14, $inter, $dark-gray, $upper, none);
             font-weight: $medium;
             padding-bottom: 1.5px;
             position: relative;
+            @include responsive(phone-port-sm) { font-size: $px13; }
             &::after {
                 content: '';
                 position: absolute;
@@ -88,6 +90,9 @@
                 background-color: $black;
                 transform: scale(0, 1);
                 transition: 0.3s linear;
+                @include responsive(tablet-lg) { height: 1.1px; }
+                @include responsive(phone-port-md) { height: 1.5px; }
+                @include responsive(phone-port-sm) { height: 1px; }
             }
             &:hover::after {
                 transform: scale(1, 1);
@@ -97,6 +102,7 @@
     .change-size {
         padding-top: 0;
         margin-top: $px20;
-        @include responsive(phone-port-sm) { margin-top: $px15; }
+        @include responsive(phone-port-md) { margin-top: $px15; }
+        @include responsive(phone-port-sm) { margin-top: $px10; }
     }
 }
