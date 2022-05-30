@@ -2223,9 +2223,69 @@ body.open {
   margin-top: 20px;
   padding-bottom: 100px;
 }
+@media only screen and (max-width: 1024px) {
+  .section-cont .gallery {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .section-cont .gallery {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 80px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .section-cont .gallery {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .section-cont .gallery {
+    padding-bottom: 60px;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .section-cont .gallery {
+    margin-top: 15px;
+    padding-bottom: 50px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .section-cont .gallery {
+    margin-top: 10px;
+  }
+}
 .section-cont .gallery .images-vertical-block {
   max-width: 379px;
   width: 100%;
+}
+@media only screen and (max-width: 1024px) {
+  .section-cont .gallery .images-vertical-block:nth-child(2) {
+    margin: 0 16px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .section-cont .gallery .images-vertical-block:nth-child(2) {
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .section-cont .gallery .images-vertical-block:nth-child(2) {
+    margin: 15px 0 0 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .section-cont .gallery .images-vertical-block {
+    max-width: 100%;
+    display: inline-block;
+  }
+  .section-cont .gallery .images-vertical-block:nth-child(3) {
+    display: none;
+  }
 }
 
 .image {
