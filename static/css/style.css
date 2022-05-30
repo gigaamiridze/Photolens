@@ -1415,9 +1415,14 @@ body.open {
   padding-bottom: 1.5px;
   position: relative;
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 380px) {
   .section-cont .back-link .page-name {
     font-size: 13px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .section-cont .back-link .page-name {
+    font-size: 12.5px;
   }
 }
 .section-cont .back-link .page-name::after {
@@ -1728,6 +1733,7 @@ body.open {
 .shop-cont .content-block .content-box .img-info {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   margin-top: 15px;
 }
 @media only screen and (max-width: 480px) {
@@ -1745,6 +1751,7 @@ body.open {
     margin-top: 5px;
   }
 }
+.shop-cont .content-block .content-box .img-info .project-name,
 .shop-cont .content-block .content-box .img-info .location {
   font-size: 16px;
   font-family: "Inter", sans-serif;
@@ -1753,21 +1760,26 @@ body.open {
   line-height: 24px;
 }
 @media only screen and (max-width: 380px) {
-  .shop-cont .content-block .content-box .img-info .location {
+  .shop-cont .content-block .content-box .img-info .project-name,
+.shop-cont .content-block .content-box .img-info .location {
     font-size: 15px;
   }
 }
 @media only screen and (max-width: 320px) {
-  .shop-cont .content-block .content-box .img-info .location {
+  .shop-cont .content-block .content-box .img-info .project-name,
+.shop-cont .content-block .content-box .img-info .location {
     font-size: 14px;
   }
+}
+.shop-cont .content-block .content-box .img-info .comma {
+  width: 10px;
 }
 .shop-cont .content-block .content-box .img-info .dash {
   width: 10px;
   height: 1px;
   background-color: #222222;
   border-radius: 2px;
-  margin: 0 7px 0 7px;
+  margin: 0 7px;
 }
 .shop-cont .content-block .content-box .img-info .money {
   font-size: 16px;
@@ -2144,6 +2156,23 @@ body.open {
 }
 .shop-cont .change-size-1:last-child .content-box .img-info .for {
   font-weight: 400;
+  margin-right: 7px;
+}
+@media only screen and (max-width: 1024px) {
+  .shop-cont .change-size-1:last-child .event-box {
+    max-width: 480px;
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .shop-cont .change-size-1:last-child .event-box {
+    max-width: 398px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .shop-cont .change-size-1:last-child .event-box {
+    max-width: 100%;
+  }
 }
 
 .fixed-header .header-cont {

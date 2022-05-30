@@ -123,21 +123,26 @@
             .img-info {
                 @include display (flex);
                 align-items: center;
+                flex-wrap: wrap;
                 margin-top: $px15;
                 @include responsive(phone-land-sm) { margin-top: $px10; }
                 @include responsive(phone-port-md) { margin-top: $px7; }
                 @include responsive(phone-port-sm) { margin-top: $px5; }
+                .project-name,
                 .location {
                     @include text-property ($px16, $inter, $black, $capit, $px24);
                     @include responsive(phone-port-md) { font-size: $px15; }
                     @include responsive(phone-port-sm) { font-size: $px14; }
+                }
+                .comma {
+                    width: $px10;
                 }
                 .dash {
                     width: $px10;
                     height: $px1;
                     background-color: $black;
                     border-radius: $px2;
-                    margin: 0 $px7 0 $px7;
+                    margin: 0 $px7;
                 }
                 .money {
                     @include text-property ($px16, $inter, $black, $upper, $px24);

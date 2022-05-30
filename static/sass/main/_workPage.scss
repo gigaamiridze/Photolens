@@ -79,7 +79,8 @@
             font-weight: $medium;
             padding-bottom: 1.5px;
             position: relative;
-            @include responsive(phone-port-sm) { font-size: $px13; }
+            @include responsive(phone-port-md) { font-size: $px13; }
+            @include responsive(phone-port-sm) { font-size: 12.5px; }
             &::after {
                 content: '';
                 position: absolute;

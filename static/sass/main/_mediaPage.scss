@@ -55,13 +55,24 @@
         @include responsive(phone-port-sm) { margin-top: $px10; }
         .content-box {
             .img-info {
+                // @include responsive(tablet-lg) { flex-wrap: wrap; }
                 .no-transform {
                     text-transform: none;
                 }
                 .for {
                     font-weight: $regular;
+                    margin-right: $px7;
                 }
             }
+        }
+        // styles of event page
+        .event-box {
+            @include responsive(desktop) {
+                max-width: 480px;
+                margin-right: 0;
+            }
+            @include responsive(tablet-lg) { max-width: 398px; }
+            @include responsive(tablet) { max-width: 100%; }
         }
     }
 }
