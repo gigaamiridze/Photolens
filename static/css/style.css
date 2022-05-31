@@ -2355,10 +2355,24 @@ body.open {
 .text-content .info-box {
   display: flex;
   width: 375px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 25px;
-  margin-bottom: 20px;
+  margin: 25px auto 20px auto;
+}
+@media only screen and (max-width: 480px) {
+  .text-content .info-box {
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 15px;
+    justify-items: start;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    width: 246px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .text-content .info-box {
+    margin-top: 20px;
+    width: 234px;
+  }
 }
 .text-content .info-box .photo-info {
   display: flex;
@@ -2368,6 +2382,11 @@ body.open {
 .text-content .info-box .photo-info:last-child {
   margin-right: 0;
 }
+@media only screen and (max-width: 480px) {
+  .text-content .info-box .photo-info {
+    margin-right: 0;
+  }
+}
 .text-content .info-box .photo-info .small-par {
   font-size: 14px;
   font-family: "Inter", sans-serif;
@@ -2375,6 +2394,11 @@ body.open {
   text-transform: none;
   line-height: 20px;
   margin-left: 8px;
+}
+@media only screen and (max-width: 320px) {
+  .text-content .info-box .photo-info .small-par {
+    font-size: 13px;
+  }
 }
 
 .section-cont .content-block .cart-box {
