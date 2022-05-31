@@ -48,6 +48,22 @@
             }
         }
     }
+    // other page 'info box' responsive
+    .tesla-info {
+        width: 328px;
+        @include responsive(phone-land-sm) { width: 200px; }
+        @include responsive(phone-port-sm) { width: 180px; }
+    }
+    .unconcept-info {
+        width: 353px;
+        @include responsive(phone-land-sm) { width: 205px; }
+        @include responsive(phone-port-sm) { width: 190px; }
+    }
+    .kirkjufell-info {
+        width: 347px;
+        @include responsive(phone-land-sm) { width: 222px; }
+        @include responsive(phone-port-sm) { width: 190px; }
+    }
 }
 
 // second section

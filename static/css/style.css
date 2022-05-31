@@ -2400,6 +2400,45 @@ body.open {
     font-size: 13px;
   }
 }
+.text-content .tesla-info {
+  width: 328px;
+}
+@media only screen and (max-width: 480px) {
+  .text-content .tesla-info {
+    width: 200px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .text-content .tesla-info {
+    width: 180px;
+  }
+}
+.text-content .unconcept-info {
+  width: 353px;
+}
+@media only screen and (max-width: 480px) {
+  .text-content .unconcept-info {
+    width: 205px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .text-content .unconcept-info {
+    width: 190px;
+  }
+}
+.text-content .kirkjufell-info {
+  width: 347px;
+}
+@media only screen and (max-width: 480px) {
+  .text-content .kirkjufell-info {
+    width: 222px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .text-content .kirkjufell-info {
+    width: 190px;
+  }
+}
 
 .section-cont .content-block .cart-box {
   max-width: 380px;
