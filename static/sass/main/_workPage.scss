@@ -93,7 +93,7 @@
                 transition: 0.3s linear;
                 @include responsive(tablet-lg) { height: 1.1px; }
                 @include responsive(phone-port-md) { height: 1.5px; }
-                @include responsive(phone-port-sm) { height: 1px; }
+                @include responsive(phone-port-sm) { height: 1.2px; }
             }
             &:hover::after {
                 transform: scale(1, 1);
